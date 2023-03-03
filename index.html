@@ -1,0 +1,53 @@
+<html>
+<style>
+    html,
+    body {
+        font-size: 10px;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+</head>
+
+<body>
+    Our root is html element which has <b>font-size: 10px</b> so our REM is equal to 10px
+
+    <div style="background-color: purple; width:1rem;"><br></div>
+    <b>Purple element</b> has width <b>1rem</b> so it means - to calculate how many px it is in real we have to do
+    operation: 1rem = 1 * REM = 1 * 10px - <b>in this case our root element is html, html has font-size: 10px</b>
+
+    <div style="background-color: red; width:1em;"><br></div>
+    <b>Red element</b> has width <b>1em</b> so it means - to calculate how many px it is in real we have to do
+    operation: 1em = 1 * EM = 1 * 10px - <b>in this case our parent element is body, body has font-size: 10px</b>
+
+    <div style="background-color:gray; font-size: 35px; width: 80%;">
+        <b>Gray element</b> has diffrient value for <b>font-size: 35px</b> and <b>width: 80%</b>
+
+        <div style="background-color: pink; width:1rem;"><br></div>
+        <b>Pink element</b> has width <b>1rem</b> so it means - to calculate how many px it is in real we have to do
+        operation: 1rem = 1 * REM = 1 * 10px - <b>in this case our root still is element html, html has font-size:
+            10px</b>
+
+        <div style="background-color: blue; width: 1em;"><br></div>
+        <b>Blue element</b> has width <b>1em</b> so it means - to calculate how many px it is in real we have to do
+        operation: 1em = 1 * EM = 1 * 35px - <b>in this case our parent element is gray div element, which has
+            font-size: 35px</b>
+
+        <div style="background-color: green; font-size:20px; width: 1em;"><br></div>
+        <b>Green element</b> has width <b>1em</b> and diffrient <b>font-size: 20px</b> so it means - to calculate how
+        many px it is in real we have to do operation: <s> 1em = 1 * EM = 1 * 35px - <b> in this case our parent element
+                is gray div element, which has font-size: 35px</b></s> - <b>NOT THIS TIME - if current element has own
+            font-size it has higher priority then parent so it means: 1em = 1 * EM = 1 * 20px </b>
+
+        <div style="background-color:aqua; width: 50%;"><br></div>
+        <b>Aqua element</b> has width <b>50%</b> so it means it is 50% of width of our parent (grey element)
+
+        <div style=" background-color: brown; width: 50vw;"><br></div>
+        <b>Brown element</b> has width <b>50vw</b> so it means it is 50 units of viewport width (viewport - the user's
+        visible area of a web page (0-100 range))
+    </div>
+</body>
+
+</html>

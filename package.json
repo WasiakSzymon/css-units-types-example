@@ -1,0 +1,15 @@
+{
+  "name": "css-units-types-example",
+  "version": "1.0.0",
+  "description": "It is example project showing differences between css units",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WasiakSzymon/css-units-types-example.git"
+  },
+  "author": "Wasiak Szymon",
+  "license": "ISC",
+  "homepage": "https://github.com/WasiakSzymon/css-units-types-example#readme"
+}
